@@ -1,0 +1,34 @@
+# GitHub Actions Run Log - YummyApp CI Pipeline
+# Job: mobile-test-job | Branch: main
+# Workflow: YummyApp Mobile Backend CI Pipeline
+# NOTE: Download full log archive from GitHub Actions tab:
+#   Repo: https://github.com/2312792-debug/yummyapp-cicd
+#   Actions tab -> latest green run -> Menu (3 dots) -> Download log archive
+#   Extract and copy content of the job log file here.
+#
+# --- Placeholder content (replace with actual GitHub Actions log) ---
+#
+# Run actions/checkout@v4
+#   Syncing repository: 2312792-debug/yummyapp-cicd
+# Run actions/setup-python@v5
+#   Successfully setup CPython (3.11)
+# Run: pip install -r requirements.txt
+#   Successfully installed coverage-7.4.0 flake8-7.0.0 requests-2.31.0
+# Run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+#   0
+# Run: coverage run -m unittest discover -s . -p "test_*.py"
+#   ............
+#   Ran 12 tests in 0.010s
+#   OK
+# Run: coverage report -m
+#   Name                Stmts   Miss  Cover   Missing
+#   -------------------------------------------------
+#   gps_service.py          4      1    75%   11
+#   test_yummy_app.py      61      1    98%   105
+#   yummy_app.py           30      0   100%
+#   -------------------------------------------------
+#   TOTAL                  95      2    98%
+# Run: coverage report --fail-under=80
+#   (pass - 98% >= 80%)
+# Run: actions/upload-artifact@v4
+#   Artifact YummyApp-Coverage-Report uploaded successfully
